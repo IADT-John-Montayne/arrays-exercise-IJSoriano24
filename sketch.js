@@ -44,6 +44,58 @@ let party = people.slice(1, 5); // This will create a new array with elements fr
 
 console.log(party);
 
+//////////////////////////////////////////////////////////////////////////
+
+//Exercise: Fruit Basket Manager
+	//Read from the array
+		//log the first fruit
+			let fruitBasket = ["apple", "banana", "orange", "pear"];
+
+			console.log(fruitBasket[0]);
+
+		//log the last fruit
+			let fruitBasketLength = fruitBasket.length;
+			console.log(fruitBasket[fruitBasket.length - 1]);
+
+	//Modify the basket
+		//Replace "banana" with "kiwi" (Find banana first)
+			let bananaIndex = fruitBasket.indexOf("banana");
+				if (bananaIndex !== -1) {
+					fruitBasket[bananaIndex] = "kiwi";
+				}
+			console.log(fruitBasket);
+
+		//Remove the last fruit
+			fruitBasket.pop()
+			console.log(fruitBasket)
+			 
+		//Add "mango" to the start of the array
+			fruitBasket.unshift("grapes")
+			console.log(fruitBasket);
+
+		//Loop through the basket
+			for (let i = 0; i < fruitBasket.length; i++) {
+				console.log(fruitBasket[i]); 
+			}
+
+		//Use a for loop to log every fruit in this format
+			for (let fruit of fruitBasket) {
+				console.log(fruit); 
+			}
+
+	//Search for a fruit
+		//Check if "Orange" exists in the basket
+			if (fruitBasket.indexOf("orange") == -1 ) {
+				console.log("orange not found");
+			}	
+
+		//if it exists, log: Orange founda t Index X
+			else {console.log(`Orange found at index ${fruitBasket.indexOf("orange")}`)
+
+			}
+	
+
+			
 function setup() {
 	createCanvas(500, 500);
 	background(55);
